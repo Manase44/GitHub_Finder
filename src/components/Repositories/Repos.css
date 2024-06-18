@@ -1,0 +1,32 @@
+.repos-section{
+    margin-bottom:1.3rem;
+}
+.repositories-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem 3rem;
+    padding: 0 4rem 0 .7rem;
+}
+.repo-card{
+    --padding:.6rem;
+    border-radius: .3rem;
+    overflow:hidden;
+}
+.repo-card-header{
+    padding:var(--padding);
+    background-color: var(--primary-color);
+}
+.repo-description{
+    margin:1rem 0;
+}
+.repo-card-footer{
+    padding:var(--padding);
+    display:flex;
+    gap: 1rem;
+    background-color:var(--card-footer-color);
+}
+.repo-card-footer p{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}

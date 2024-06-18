@@ -1,0 +1,25 @@
+header{
+    position: fixed;
+    top: 0;
+    width:100vw;
+    height:3.5rem;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+.header-title{
+    text-decoration: none;
+}
+.header-title h1{
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    font-size:25px;
+}
+.header-author, .header-author a{
+    color: var(--text-secondary);
+}
+.search-form input, .search-form button{
+    padding:.5rem;
+}
