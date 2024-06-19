@@ -10,9 +10,6 @@ header{
     padding: 0 2rem;
 }
 .header-title{
-    text-decoration: none;
-}
-.header-title h1{
     text-transform: uppercase;
     color: var(--text-secondary);
     font-size:25px;
