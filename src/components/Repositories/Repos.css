@@ -7,6 +7,11 @@
     gap: 1.5rem 3rem;
     padding: 0 4rem 0 .7rem;
 }
+.repo-link{
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
 .repo-card{
     --padding:.6rem;
     border-radius: .3rem;

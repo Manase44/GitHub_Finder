@@ -1,4 +1,6 @@
 import './Aside.css'
+import apiFetch from '../API/API';
+import UserNameStore from '../../Store/usernameStore';
 import { Link } from 'react-router-dom'
 import { RiGitRepositoryFill } from "react-icons/ri";
 import { MdGroups } from "react-icons/md";
@@ -7,6 +9,21 @@ import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import profile from '../../assets/dummypic.jpg'
 
 const Aside = () => {
+  const username = UserNameStore((state) => state.username);
+  const data = apiFetch(`https://api.github.com/users/${username}`)
+  const userDetails = 
+          {
+            'imageurl': data.avatar_url,
+            'name': data.name,
+            'gitusername': data.login,
+            'bio': data.bio,
+            'giturl': data.url,
+            'location': data.location,
+            'noOfRepos ': data.public_repos,
+            'followers': data.followers,
+            'following': data.following,
+          }
+          console.log(userDetails);
   return (
     <aside className='profile-side-bar'>
       <div className="profile-header">

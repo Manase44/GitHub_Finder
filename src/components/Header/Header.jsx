@@ -1,44 +1,37 @@
 import './Header.css'
-import { Link } from 'react-router-dom'
-import { useState } from 'react'
+import { useEffect } from 'react'
+import UserNameStore from '../../Store/usernameStore'
+
+
 
 const Header = () => {
-  const [username, setUsername] = useState("github")
+  const setUsername = UserNameStore((state) => state.changeUsername);
+ 
+  const handleMyRender = e => {
+    e.preventDefault();
+    setUsername("Manase44")
+  }
 
-  // setUsername("Manase44");
-
-  const apiFetch = async() => {
-    try{
-      const response = await fetch(`https://api.github.com/users/${username}`)
-      if (!response.ok) {
-        throw new Error("Something went wrong! We are unable to get your request")
-      }else{
-        const data = await response.json();
-        console.log(data.avatar_url);
-      }
-    }
-    catch(err){
-      console.log(err)
-    }
+  const handleChange = e => {
+    setUsername(e.target.value);
   }
 
   const handleSearchClick = e => {
     e.preventDefault();
-    apiFetch();
   };
-
+  
   return (
     <header>
-        <h1 className="header-title">github finder</h1>
-        <p className="header-author">By 
-          <a href="" target='_blank'> Manase Gunga</a>
-        </p>
-        <div className="header-search">
-          <form className="search-form">
-            <input type="text" name="username" id="username" placeholder='enter a username'/>
-            <button onClick={handleSearchClick}>Search</button>
-          </form>
-        </div>
+      <h1 className="header-title">github finder</h1>
+      <p className="header-author">By
+        <a onClick={handleMyRender} href=""> Manase Gunga</a>
+      </p>
+      <div className="header-search">
+        <form className="search-form">
+          <input type="text" name="username" id="username" placeholder='enter a username' onChange={handleChange} />
+          <button onClick={handleSearchClick}>Search</button>
+        </form>
+      </div>
     </header>
   )
 }
