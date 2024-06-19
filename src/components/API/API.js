@@ -12,20 +12,21 @@
 //   }
 // };
 const apiFetch = async (url) => {
-    try {
-      const response = await fetch(`${url}`)
+  try {
+    const response = await fetch(`${url}`);
 
-      if (!response.ok) {
-        throw new Error("Something went wrong! We are unable to get your request")
-      } else {
-        const data = await response.json();
-        console.log(data);
-        return data;
-      }
+    if (!response.ok) {
+      throw new Error(
+        "Something went wrong! We are unable to get your request",
+      );
+    } else {
+      const data = await response.json();
+      console.log(data);
+      return data;
     }
-    catch (err) {
-      console.log(err)
-    }
+  } catch (err) {
+    console.log(err);
   }
+};
 
 export default apiFetch;

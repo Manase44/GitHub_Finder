@@ -1,68 +1,69 @@
-.profile-side-bar{
-    position:fixed;
-    /* left: 5rem; */
+.profile-side-bar {
+  position: fixed;
+  /* left: 5rem; */
 }
-.profile-header{
-    width: 19rem;
+.profile-header {
+  width: 19rem;
 }
-.profile-picture{
-    background-color: var(--text-secondary);
-    width: 100%;
-    height:16rem;
-    border-radius: .6rem;
-    overflow:hidden;
+.profile-picture {
+  background-color: var(--text-secondary);
+  width: 100%;
+  height: 16rem;
+  border-radius: 0.6rem;
+  overflow: hidden;
 }
-.profile-picture img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+.profile-picture img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
-.profile-header h2{
-    text-transform: capitalize;
-    margin: 1rem 0;
+.profile-header h2 {
+  text-transform: capitalize;
+  margin: 1rem 0;
 }
-.profile-header p, .profile-details-link{
-    margin:.4rem 0;
+.profile-header p,
+.profile-details-link {
+  margin: 0.4rem 0;
 }
-.profile-header a{
-    display: flex;
-    gap:.5rem;
-    align-items: center;
-    justify-content: center;
-    border-radius: .3rem;
-    background-color: var(--secondary-color);
-    color: var(--text-secondary);
-    text-decoration: none;
-    text-transform: capitalize;
-    padding:.7rem;
+.profile-header a {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.3rem;
+  background-color: var(--secondary-color);
+  color: var(--text-secondary);
+  text-decoration: none;
+  text-transform: capitalize;
+  padding: 0.7rem;
 }
-.profile-header a > svg{
-    font-size:12px;
+.profile-header a > svg {
+  font-size: 12px;
 }
-.profile-details{
-    list-style: none;
-    margin: .5rem 0;
+.profile-details {
+  list-style: none;
+  margin: 0.5rem 0;
 }
-.profile-details-link{
-    display: flex;
-    gap:.5rem;
-    align-items:center;
+.profile-details-link {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
 }
-.profile-details-link svg{
-    color:var(--secondary-color);
-    font-size: 18px;
+.profile-details-link svg {
+  color: var(--secondary-color);
+  font-size: 18px;
 }
 
-@media screen and (max-width:765px) {
-    .profile-side-bar{
-        position: unset;
-    }
-    .profile-header{
-        width: 80%;
-    }
+@media screen and (max-width: 765px) {
+  .profile-side-bar {
+    position: unset;
+  }
+  .profile-header {
+    width: 80%;
+  }
 }
-@media screen and (max-width:350px) {
-    .profile-header{
-        width: 90%;
-    }
+@media screen and (max-width: 350px) {
+  .profile-header {
+    width: 90%;
+  }
 }
