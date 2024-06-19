@@ -2,21 +2,25 @@ header{
     position: fixed;
     top: 0;
     width:100vw;
-    height:3.5rem;
+    height:3.55rem;
     background-color: var(--secondary-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
+    padding:0 1.2rem;
 }
 .header-title{
     text-transform: uppercase;
     color: var(--text-secondary);
-    font-size:25px;
+    font-size:23px;
+    letter-spacing: 1px;
 }
 .header-author, .header-author a{
     color: var(--text-secondary);
 }
 .search-form input, .search-form button{
-    padding:.5rem;
+    padding:.6rem;
+}
+.search-form input::placeholder, .search-form button{
+    font-weight: 700;
 }
