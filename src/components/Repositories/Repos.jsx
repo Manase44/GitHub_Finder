@@ -19,6 +19,78 @@ const Repos = () => {
                     <p><FaStar/>20 stars</p>
                 </div>
             </div>
+            <div className="repo-card">
+                <div className="repo-card-header">
+                    <h3 className="repo-title">github</h3>
+                    <p className="repo-description">
+                        Community health files for the @GitHub organization
+                    </p>
+                </div>
+                <div className="repo-card-footer">
+                    <p><LuGitFork/>200 forks</p>
+                    <p><FaStar/>20 stars</p>
+                </div>
+            </div>
+            <div className="repo-card">
+                <div className="repo-card-header">
+                    <h3 className="repo-title">github</h3>
+                    <p className="repo-description">
+                        Community health files for the @GitHub organization
+                    </p>
+                </div>
+                <div className="repo-card-footer">
+                    <p><LuGitFork/>200 forks</p>
+                    <p><FaStar/>20 stars</p>
+                </div>
+            </div>
+            <div className="repo-card">
+                <div className="repo-card-header">
+                    <h3 className="repo-title">github</h3>
+                    <p className="repo-description">
+                        Community health files for the @GitHub organization
+                    </p>
+                </div>
+                <div className="repo-card-footer">
+                    <p><LuGitFork/>200 forks</p>
+                    <p><FaStar/>20 stars</p>
+                </div>
+            </div>
+            <div className="repo-card">
+                <div className="repo-card-header">
+                    <h3 className="repo-title">github</h3>
+                    <p className="repo-description">
+                        Community health files for the @GitHub organization
+                    </p>
+                </div>
+                <div className="repo-card-footer">
+                    <p><LuGitFork/>200 forks</p>
+                    <p><FaStar/>20 stars</p>
+                </div>
+            </div>
+            <div className="repo-card">
+                <div className="repo-card-header">
+                    <h3 className="repo-title">github</h3>
+                    <p className="repo-description">
+                        Community health files for the @GitHub organization
+                    </p>
+                </div>
+                <div className="repo-card-footer">
+                    <p><LuGitFork/>200 forks</p>
+                    <p><FaStar/>20 stars</p>
+                </div>
+            </div>
+            <div className="repo-card">
+                <div className="repo-card-header">
+                    <h3 className="repo-title">github</h3>
+                    <p className="repo-description">
+                        Community health files for the @GitHub organization
+                    </p>
+                </div>
+                <div className="repo-card-footer">
+                    <p><LuGitFork/>200 forks</p>
+                    <p><FaStar/>20 stars</p>
+                </div>
+            </div>
         </div>
     </section>
   )

@@ -13,6 +13,62 @@ const Follow = () => {
                 <h3 className="follower-username">bruce</h3>
                 <Link to={"#"}><IoLink />view bruce</Link>
             </div>
+            <div className="follower-card">
+                <div className="follower-profile">
+                    <img src={pic} alt="the follower profile" />
+                </div>
+                <h3 className="follower-username">bruce</h3>
+                <Link to={"#"}><IoLink />view bruce</Link>
+            </div>
+            <div className="follower-card">
+                <div className="follower-profile">
+                    <img src={pic} alt="the follower profile" />
+                </div>
+                <h3 className="follower-username">bruce</h3>
+                <Link to={"#"}><IoLink />view bruce</Link>
+            </div>
+            <div className="follower-card">
+                <div className="follower-profile">
+                    <img src={pic} alt="the follower profile" />
+                </div>
+                <h3 className="follower-username">bruce</h3>
+                <Link to={"#"}><IoLink />view bruce</Link>
+            </div>
+            <div className="follower-card">
+                <div className="follower-profile">
+                    <img src={pic} alt="the follower profile" />
+                </div>
+                <h3 className="follower-username">bruce</h3>
+                <Link to={"#"}><IoLink />view bruce</Link>
+            </div>
+            <div className="follower-card">
+                <div className="follower-profile">
+                    <img src={pic} alt="the follower profile" />
+                </div>
+                <h3 className="follower-username">bruce</h3>
+                <Link to={"#"}><IoLink />view bruce</Link>
+            </div>
+            <div className="follower-card">
+                <div className="follower-profile">
+                    <img src={pic} alt="the follower profile" />
+                </div>
+                <h3 className="follower-username">bruce</h3>
+                <Link to={"#"}><IoLink />view bruce</Link>
+            </div>
+            <div className="follower-card">
+                <div className="follower-profile">
+                    <img src={pic} alt="the follower profile" />
+                </div>
+                <h3 className="follower-username">bruce</h3>
+                <Link to={"#"}><IoLink />view bruce</Link>
+            </div>
+            <div className="follower-card">
+                <div className="follower-profile">
+                    <img src={pic} alt="the follower profile" />
+                </div>
+                <h3 className="follower-username">bruce</h3>
+                <Link to={"#"}><IoLink />view bruce</Link>
+            </div>
         </div>
     )
 }

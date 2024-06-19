@@ -30,3 +30,24 @@
     align-items: center;
     gap: .5rem;
 }
+
+@media screen and (max-width: 1050px) {
+    .repositories-container{
+        grid-template-columns: repeat(1, 1fr);
+        padding:.7rem;
+        gap:1.5rem;
+    }
+}
+@media screen and (max-width: 765px) {
+    .repos-section{
+        margin:1.3rem;
+    }
+    .repositories-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 600px) {
+    .repositories-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

@@ -24,3 +24,11 @@ header{
 .search-form input::placeholder, .search-form button{
     font-weight: 700;
 }
+@media screen and (max-width:765px) {
+    header{
+        flex-direction: column;
+        height: max-content;
+        padding:.5rem;
+        gap:.3rem;
+    }
+}
