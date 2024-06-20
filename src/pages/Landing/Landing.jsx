@@ -13,8 +13,8 @@ const Landing = () => {
         <Aside />
         <div className="main-div-content">
           <Repos />
-          <Followers/>
-          <Following/>
+          <Followers />
+          <Following />
         </div>
       </div>
     </div>
