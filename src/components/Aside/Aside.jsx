@@ -6,18 +6,11 @@ import { RiGitRepositoryFill } from "react-icons/ri";
 import { MdGroups } from "react-icons/md";
 import { IoLocationOutline } from "react-icons/io5";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
+import { PiBuildingOfficeBold } from "react-icons/pi";
 
 const Aside = () => {
   const username = UserNameStore((state) => state.username);
-  const [userAvatar, setUserAvatar] = useState(null);
-  const [userLoginName, setUserLoginName] = useState(null);
-  const [userName, setUserName] = useState(null);
-  const [userBio, setUserBio] = useState(null);
-  const [userGitHubUrl, setUserGitHubUrl] = useState(null);
-  const [userLocation, setuserLocation] = useState(null);
-  const [userNoOfRepos, setUserNoOfRepos] = useState(null);
-  const [userNoOfFollowers, setUserNoOfFollowers] = useState(null);
-  const [userNoOfFollowing, setUserNoOfFollowing] = useState(null);
+  const [userDetails, setUserDetails] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [errorEncounter, setErrorEncounter] = useState(false);
 
@@ -32,15 +25,7 @@ const Aside = () => {
       } else {
         const data = await response.json();
         console.log(data);
-        setUserAvatar(data.avatar_url);
-        setUserName(data.name);
-        setUserLoginName(data.login);
-        setUserBio(data.bio);
-        setUserGitHubUrl(data.html_url);
-        setuserLocation(data.location);
-        setUserNoOfRepos(data.public_repos);
-        setUserNoOfFollowers(data.followers);
-        setUserNoOfFollowing(data.following);
+        setUserDetails(data);
         setIsLoading(false);
       }
     } catch (err) {
@@ -78,31 +63,39 @@ const Aside = () => {
     <aside className="profile-side-bar">
       <div className="profile-header">
         <div className="profile-picture">
-          <img src={userAvatar} alt="the profile of the user" />
+          <img src={userDetails.avatar_url} alt="the profile of the user" />
         </div>
-        <h2>{userName}</h2>
-        <p>{userLoginName}</p>
-        <p>{userBio}</p>
-        <Link to={userGitHubUrl} target="_blank">
+        <h2>{userDetails.name}</h2>
+        <p>{userDetails.login}</p>
+        <p>{userDetails.bio}</p>
+        <Link to={userDetails.html_url} target="_blank">
           <FaArrowUpRightFromSquare /> view on github
         </Link>
       </div>
       <ul className="profile-details">
-        <li className="profile-details-link">
-          <IoLocationOutline />
-          <span>{userLocation}</span>
-        </li>
+        {userDetails.location && (
+          <li className="profile-details-link">
+            <IoLocationOutline />
+            <span>{userDetails.location}</span>
+          </li>
+        )}
+        {userDetails.company && (
+          <li className="profile-details-link">
+            <PiBuildingOfficeBold />
+            <span>{userDetails.company}</span>
+          </li>
+        )}
         <li className="profile-details-link">
           <RiGitRepositoryFill />
-          <span>{userNoOfRepos} repositories</span>
+          <span>{userDetails.public_repos} repositories</span>
         </li>
         <li className="profile-details-link">
           <MdGroups />
-          <span>{userNoOfFollowers} followers</span>
+          <span>{userDetails.followers} followers</span>
         </li>
         <li className="profile-details-link">
           <MdGroups />
-          <span>{userNoOfFollowing} following</span>
+          <span>{userDetails.following} following</span>
         </li>
       </ul>
     </aside>
