@@ -1,9 +1,11 @@
 import "./Header.css";
-import { useEffect } from "react";
+import { useState } from "react";
 import UserNameStore from "../../Store/usernameStore";
 
 const Header = () => {
   const setUsername = UserNameStore((state) => state.changeUsername);
+  const username = UserNameStore((state) => state.username);
+  const [usernameInput, setUsernameInput] = useState(username);
 
   const handleMyRender = (e) => {
     e.preventDefault();
@@ -11,11 +13,12 @@ const Header = () => {
   };
 
   const handleChange = (e) => {
-    setUsername(e.target.value);
+    setUsernameInput(e.target.value);
   };
 
   const handleSearchClick = (e) => {
     e.preventDefault();
+    setUsername(usernameInput);
   };
 
   return (

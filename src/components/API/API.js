@@ -1,16 +1,3 @@
-// const API = (link) => {
-//   const data = {
-//     "name":"username",
-//     "age": 21
-//   }
-//   const error = "This is your error";
-//   const success = true;
-//   if (success) {
-//     return data
-//   } else {
-//     return error
-//   }
-// };
 const apiFetch = async (url) => {
   try {
     const response = await fetch(`${url}`);
@@ -21,7 +8,6 @@ const apiFetch = async (url) => {
       );
     } else {
       const data = await response.json();
-      console.log(data);
       return data;
     }
   } catch (err) {

@@ -1,20 +1,26 @@
 import "./Follow.css";
-import { Link } from "react-router-dom";
 import { IoLink } from "react-icons/io5";
-import pic from "../../assets/dummypic.jpg";
+import UserNameStore from "../../Store/usernameStore";
+// import pic from "../../assets/dummypic.jpg";
 
-const Follow = () => {
+const Follow = ({avatar, name}) => {
+  const setUsername = UserNameStore((state) => state.changeUsername);
+  
+  const handleFollowLink = e => {
+    e.preventDefault();
+    setUsername(name)
+  }
   return (
     <div className="followers-container">
       <div className="follower-card">
         <div className="follower-profile">
-          <img src={pic} alt="the follower profile" />
+          <img src={avatar} alt="the follower profile" />
         </div>
-        <h3 className="follower-username">bruce</h3>
-        <Link to={"#"}>
+        <h3 className="follower-username">{name}</h3>
+        <button onClick={handleFollowLink}>
           <IoLink />
-          view bruce
-        </Link>
+          view {name}
+        </button>
       </div>
     </div>
   );
